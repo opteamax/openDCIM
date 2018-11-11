@@ -123,6 +123,7 @@ function redirect($target = null) {
 				//started with a slash let's assume they know what they're doing
 				$target=path().$target;
 			}
+			$target="https://".$_SERVER['HTTP_HOST'].$target;
 		}else{
 			//Why the heck did you send a full url here instead of just doing a header?
 			return $target;
