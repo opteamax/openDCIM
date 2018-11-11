@@ -34,7 +34,7 @@
 	if(isset($_POST['action']) && $_POST['action']=='Delete'){
 		$c->ContainerID=$_POST['containerid'];
 		$c->DeleteContainer();
-		header('Location: container.php');
+		header('Location: '.redirect('container.php'));
 		exit;
 	}
 	

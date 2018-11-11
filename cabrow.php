@@ -21,7 +21,7 @@
 	if(isset($_POST['action']) && $_POST['action']=='Delete'){
 		$cabrow->CabRowID=$_POST['cabrowid'];
 		$cabrow->DeleteCabRow();
-		header('Location: cabrow.php');
+		header('Location: '.redirect('cabrow.php'));
 		exit;
 	}
 
